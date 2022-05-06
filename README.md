@@ -13,5 +13,7 @@ HTML, CSS, JavaScript, jQuery
 ## Future Enhancements
 I would like to update this app to make suggestions based on the weather. Maybe it has a dropdown initially asking what activities you want to do that weekend. If you select ski/snowboard then it would recommend you visit the colder/snowier zip code. If you say you want to relax and swim it would recommend a drier and warmer climate. 
 
+The API Request by Zip Code will be deprecated soon according to OpenWeather's documentation. To get ready for that I will need to also implement their Geocoding API which will allow me to convert a user's Zip code into the Lat & Long parameters needed for the 16 Day Forecast API call.
+
 ## References
-Data Courtesy of [OpenWeather's One Call API](https://openweathermap.org/api/one-call-api)
+Data Courtesy of [OpenWeather's 16 Day Forecast](https://openweathermap.org/forecast16). Also see their built in [API Request by Zip Code](https://openweathermap.org/forecast16#zip16)
