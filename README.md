@@ -5,7 +5,7 @@
 This application enables users to check the weather forecast for up to four different zip codes at once. Using the forecasts in front of them they can decide where they want to visit that weekend. 
 
 ## Visuals
-
+![Screen Shot 2022-05-06 at 3 17 35 PM](https://user-images.githubusercontent.com/65954177/167203734-e6b48baa-4530-4b83-9ef8-2ce667acdf3b.png)
 
 ## Technologies Used
 HTML, CSS, JavaScript, jQuery
