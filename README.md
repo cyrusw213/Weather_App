@@ -1,5 +1,5 @@
 # Name
-**Where Should We Go This Weekend**
+**Where Should We Go This Weekend?**
 
 ## Description & Features
 This application enables users to check the weather forecast for up to four different zip codes at once. Using the forecasts in front of them they can decide where they want to visit that weekend. 
