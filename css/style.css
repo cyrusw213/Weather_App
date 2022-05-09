@@ -1,21 +1,30 @@
+main{
+    display: flex;
+}
+
 #locOne {
-    position: absolute;
+    position: ;
     left: 80px;
+
 }
 
 #locTwo {
-    position:absolute;
+    position:;
     right: 100px;
 }
 
 #locThree {
-    position:absolute;
+    position:;
     bottom: 0;
     left: 80px;
 }
 
 #locFour {
-    position:absolute;
+    position:
     bottom: 0;
     right: 100px;
 }
+
+#firstLocLists {
+    display: flex;
+    
