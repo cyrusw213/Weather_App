@@ -1,12 +1,30 @@
-main {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 50%;
-    background-color: aqua;
-  }
+main{
+    margin: 0;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50% ;
+    grid-template-areas: 
+        "sect1 sect2"
+        "sect3 sect4";
+}
 
-#firstLocLists {
-    display: flex;
-    flex-direction: row;
+#locOne {
+    grid-area: sect1;
+    background-color: green
+}
+
+#locTwo {
+    grid-area: sect2;
+    background-color: yellow
+}
+
+
+#locThree {
+    grid-area: sect3;
+    background-color: blueviolet;
+}
+
+#locFour {
+    grid-area: sect4;
+    background-color: red;
 }
