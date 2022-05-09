@@ -1,0 +1,21 @@
+#locOne {
+    position: absolute;
+    left: 80px;
+}
+
+#locTwo {
+    position:absolute;
+    right: 100px;
+}
+
+#locThree {
+    position:absolute;
+    bottom: 0;
+    left: 80px;
+}
+
+#locFour {
+    position:absolute;
+    bottom: 0;
+    right: 100px;
+}
