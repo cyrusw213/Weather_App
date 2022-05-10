@@ -20,5 +20,5 @@ HTML, CSS, JavaScript, jQuery
 - add state to the city that shows up
 
 ## References
-Data Courtesy of [OpenWeather's 5 Day / 3 Hour Forecast](https://openweathermap.org/forecast5). Specifically, their built in [API Request by Zip Code](https://openweathermap.org/forecast5#zip5)
-    
+- Data Courtesy of [OpenWeather's 5 Day / 3 Hour Forecast](https://openweathermap.org/forecast5). Specifically, their built in [API Request by Zip Code](https://openweathermap.org/forecast5#zip5)
+- [OpenWeatherMap API Tutorial 2021](https://www.youtube.com/watch?v=nGVoHEZojiQ)
