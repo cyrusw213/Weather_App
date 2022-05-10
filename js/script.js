@@ -146,6 +146,8 @@ const $tempLocFourDayOne = $('<li>')
 const $feelsLikeLocFourDayOne = $('<li>')
 const $weatherLocFourDayOne = $('<li>')
 const $windSpeedLocFourDayOne = $('<li>')
+const $iconFourDayOne = $('<img>')
+
 // location four day two element refs 
 const $dateTimeLocFourDayTwo = $('<li>')
 const $forecastLocFourDayTwo = $('.forecastLocFourDayTwo')
@@ -153,6 +155,8 @@ const $tempLocFourDayTwo = $('<li>')
 const $feelsLikeLocFourDayTwo = $('<li>')
 const $weatherLocFourDayTwo = $('<li>')
 const $windSpeedLocFourDayTwo = $('<li>')
+const $iconFourDayTwo = $('<img>')
+
 // location four day three element refs 
 const $dateTimeLocFourDayThree = $('<li>')
 const $forecastLocFourDayThree = $('.forecastLocFourDayThree')
@@ -160,6 +164,8 @@ const $tempLocFourDayThree = $('<li>')
 const $feelsLikeLocFourDayThree = $('<li>')
 const $weatherLocFourDayThree = $('<li>')
 const $windSpeedLocFourDayThree = $('<li>')
+const $iconFourDayThree = $('<img>')
+
 // location four day four element refs 
 const $dateTimeLocFourDayFour = $('<li>')
 const $forecastLocFourDayFour = $('.forecastLocFourDayFour')
@@ -167,7 +173,7 @@ const $tempLocFourDayFour = $('<li>')
 const $feelsLikeLocFourDayFour = $('<li>')
 const $weatherLocFourDayFour = $('<li>')
 const $windSpeedLocFourDayFour = $('<li>')
-
+const $iconFourDayFour = $('<img>')
 
 // event listeners
 $buttonOne.on('submit', handleGetData)
@@ -414,10 +420,13 @@ function handleGetDataLocThree(e){
         console.log(data)
         $cityFour.text('Forecast for ' + data.city.name)
         $dateTimeLocFourDayOne.text(data.list[7].dt_txt)
+        $iconFourDayOne.attr('src','http://openweathermap.org/img/wn/' + data.list[7].weather[0].icon + '@2x.png')
+        $iconFourDayOne.attr('alt', data.list[7].weather[0].description)
         $tempLocFourDayOne.text('Temp: ' + data.list[7].main.temp + ' °F')
         $feelsLikeLocFourDayOne.text('Feels Like ' + data.list[7].main.feels_like + ' °F')
         $weatherLocFourDayOne.text(data.list[7].weather[0].main + ": " + data.list[7].weather[0].description)
         $windSpeedLocFourDayOne.text('Wind Speeds: ' + data.list[7].wind.speed + ' MPH')
+        $forecastLocFourDayOne.append($iconFourDayOne)
         $forecastLocFourDayOne.append($dateTimeLocFourDayOne)
         $forecastLocFourDayOne.append($tempLocFourDayOne)
         $forecastLocFourDayOne.append($feelsLikeLocFourDayOne)
@@ -425,10 +434,13 @@ function handleGetDataLocThree(e){
         $forecastLocFourDayOne.append($windSpeedLocFourDayOne)
         // Day Two 
         $dateTimeLocFourDayTwo.text(data.list[15].dt_txt)
+        $iconFourDayTwo.attr('src','http://openweathermap.org/img/wn/' + data.list[15].weather[0].icon + '@2x.png')
+        $iconFourDayTwo.attr('alt', data.list[15].weather[0].description)
         $tempLocFourDayTwo.text('Temp: ' + data.list[15].main.temp + ' °F')
         $feelsLikeLocFourDayTwo.text('Feels Like ' + data.list[15].main.feels_like + ' °F')
         $weatherLocFourDayTwo.text(data.list[15].weather[0].main + ": " + data.list[15].weather[0].description)
         $windSpeedLocFourDayTwo.text('Wind Speeds: ' + data.list[15].wind.speed + ' MPH')
+        $forecastLocFourDayTwo.append($iconFourDayTwo)
         $forecastLocFourDayTwo.append($dateTimeLocFourDayTwo)
         $forecastLocFourDayTwo.append($tempLocFourDayTwo)
         $forecastLocFourDayTwo.append($feelsLikeLocFourDayTwo)
@@ -436,10 +448,13 @@ function handleGetDataLocThree(e){
         $forecastLocFourDayTwo.append($windSpeedLocFourDayTwo)
         // Day Three
         $dateTimeLocFourDayThree.text(data.list[23].dt_txt)
+        $iconFourDayThree.attr('src','http://openweathermap.org/img/wn/' + data.list[23].weather[0].icon + '@2x.png')
+        $iconFourDayThree.attr('alt', data.list[23].weather[0].description)
         $tempLocFourDayThree.text('Temp: ' + data.list[23].main.temp + ' °F')
         $feelsLikeLocFourDayThree.text('Feels Like ' + data.list[23].main.feels_like + ' °F')
         $weatherLocFourDayThree.text(data.list[23].weather[0].main + ": " + data.list[23].weather[0].description)
         $windSpeedLocFourDayThree.text('Wind Speeds: ' + data.list[23].wind.speed + ' MPH')
+        $forecastLocFourDayThree.append($iconFourDayThree)
         $forecastLocFourDayThree.append($dateTimeLocFourDayThree)
         $forecastLocFourDayThree.append($tempLocFourDayThree)
         $forecastLocFourDayThree.append($feelsLikeLocFourDayThree)
@@ -447,15 +462,19 @@ function handleGetDataLocThree(e){
         $forecastLocFourDayThree.append($windSpeedLocFourDayThree)
         // day four
         $dateTimeLocFourDayFour.text(data.list[31].dt_txt)
+        $iconFourDayFour.attr('src','http://openweathermap.org/img/wn/' + data.list[31].weather[0].icon + '@2x.png')
+        $iconFourDayFour.attr('alt', data.list[31].weather[0].description)
         $tempLocFourDayFour.text('Temp: ' + data.list[31].main.temp + ' °F')
         $feelsLikeLocFourDayFour.text('Feels Like ' + data.list[31].main.feels_like + ' °F')
         $weatherLocFourDayFour.text(data.list[31].weather[0].main + ": " + data.list[31].weather[0].description)
         $windSpeedLocFourDayFour.text('Wind Speeds: ' + data.list[31].wind.speed + ' MPH')
+        $forecastLocFourDayFour.append($iconFourDayFour)
         $forecastLocFourDayFour.append($dateTimeLocFourDayFour)
         $forecastLocFourDayFour.append($tempLocFourDayFour)
         $forecastLocFourDayFour.append($feelsLikeLocFourDayFour)
         $forecastLocFourDayFour.append($weatherLocFourDayFour)
         $forecastLocFourDayFour.append($windSpeedLocFourDayFour)
+
       },
       function(error) {
        console.log('something is wrong')
