@@ -10,7 +10,7 @@
 //     }
 //   ); 
 
-// Show forecasts for five days, there are 40 objects so we'll do [0], [8], [16], [27], [36]
+// Show forecasts for four days, there are 40 objects so we'll do [8], [15], [23], [31]
 // forecast will show Main {timestamp, temp, feels like, himidity} and weather {main} with icon and wind speed
 // console.log(promise)
 
@@ -122,6 +122,27 @@ const $tempLocFourDayOne = $('<li>')
 const $feelsLikeLocFourDayOne = $('<li>')
 const $weatherLocFourDayOne = $('<li>')
 const $windSpeedLocFourDayOne = $('<li>')
+// location four day two element refs 
+const $dateTimeLocFourDayTwo = $('<li>')
+const $forecastLocFourDayTwo = $('.forecastLocFourDayTwo')
+const $tempLocFourDayTwo = $('<li>')
+const $feelsLikeLocFourDayTwo = $('<li>')
+const $weatherLocFourDayTwo = $('<li>')
+const $windSpeedLocFourDayTwo = $('<li>')
+// location four day three element refs 
+const $dateTimeLocFourDayThree = $('<li>')
+const $forecastLocFourDayThree = $('.forecastLocFourDayThree')
+const $tempLocFourDayThree = $('<li>')
+const $feelsLikeLocFourDayThree = $('<li>')
+const $weatherLocFourDayThree = $('<li>')
+const $windSpeedLocFourDayThree = $('<li>')
+// location four day four element refs 
+const $dateTimeLocFourDayFour = $('<li>')
+const $forecastLocFourDayFour = $('.forecastLocFourDayFour')
+const $tempLocFourDayFour = $('<li>')
+const $feelsLikeLocFourDayFour = $('<li>')
+const $weatherLocFourDayFour = $('<li>')
+const $windSpeedLocFourDayFour = $('<li>')
 
 
 // event listeners
@@ -149,7 +170,7 @@ function handleGetData(e){
       $dateTimeOne.text(data.list[7].dt_txt)
       $tempOneDayOne.text('Temp: ' + data.list[7].main.temp + ' °F')
       $feelsLikeOneDayOne.text('Feels Like ' + data.list[7].main.feels_like + ' °F')
-      $weatherOne.text(data.list[7].weather[0].main)
+      $weatherOne.text(data.list[7].weather[0].main + ": " + data.list[7].weather[0].description)
       $windSpeed.text('Wind Speeds: ' + data.list[7].wind.speed + ' MPH')
       $forecastDayOne.append($dateTimeOne)
       $forecastDayOne.append($tempOneDayOne)
@@ -160,7 +181,7 @@ function handleGetData(e){
       $dateTimeTwo.text(data.list[15].dt_txt)
       $feelsLikeOneDayTwo.text('Feels Like ' + data.list[15].main.feels_like + ' °F')
       $tempOneDayTwo.text('Temp: ' + data.list[15].main.temp + ' °F')
-      $weatherTwo.text(data.list[15].weather[0].main)
+      $weatherTwo.text(data.list[15].weather[0].main + ": " + data.list[15].weather[0].description)
       $windSpeedDayTwo.text('Wind Speeds: ' + data.list[15].wind.speed + ' MPH')
       $forecastDayTwo.append($dateTimeTwo)
       $forecastDayTwo.append($tempOneDayTwo)
@@ -171,7 +192,7 @@ function handleGetData(e){
       $dateTimeThree.text(data.list[23].dt_txt)
       $feelsLikeOneDayThree.text('Feels Like ' + data.list[23].main.feels_like + ' °F')
       $tempOneDayThree.text('Temp: ' + data.list[23].main.temp + ' °F')
-      $weatherThree.text(data.list[23].weather[0].main)
+      $weatherThree.text(data.list[23].weather[0].main + ": " + data.list[23].weather[0].description)
       $windSpeedDayThree.text('Wind Speeds: ' + data.list[23].wind.speed + ' MPH')
       $forecastDayThree.append($dateTimeThree)
       $forecastDayThree.append($tempOneDayThree)
@@ -182,7 +203,7 @@ function handleGetData(e){
       $dateTimeFour.text(data.list[31].dt_txt)
       $feelsLikeOneDayFour.text('Feels Like ' + data.list[31].main.feels_like + ' °F')
       $tempOneDayFour.text('Temp: ' + data.list[31].main.temp + ' °F')
-      $weatherFour.text(data.list[31].weather[0].main)
+      $weatherFour.text(data.list[31].weather[0].main + ": " + data.list[31].weather[0].description)
       $windSpeedDayFour.text('Wind Speeds: ' + data.list[31].wind.speed + ' MPH')
       $forecastDayFour.append($dateTimeFour)
       $forecastDayFour.append($tempOneDayFour)
@@ -211,7 +232,7 @@ function handleGetDataLocTwo(e){
       $dateTimeLocTwoDayOne.text(data.list[7].dt_txt)
       $tempLocTwoDayOne.text('Temp: ' + data.list[7].main.temp + ' °F')
       $feelsLikeLocTwoDayOne.text('Feels Like ' + data.list[7].main.feels_like + ' °F')
-      $weatherLocTwoDayOne.text(data.list[7].weather[0].main)
+      $weatherLocTwoDayOne.text(data.list[7].weather[0].main + ": " + data.list[7].weather[0].description)
       $windSpeedLocTwoDayOne.text('Wind Speeds: ' + data.list[7].wind.speed + ' MPH')
       $forecastLocTwoDayOne.append($dateTimeLocTwoDayOne)
       $forecastLocTwoDayOne.append($tempLocTwoDayOne)
@@ -222,7 +243,7 @@ function handleGetDataLocTwo(e){
       $dateTimeLocTwoDayTwo.text(data.list[15].dt_txt)
       $tempLocTwoDayTwo.text('Temp: ' + data.list[15].main.temp + ' °F')
       $feelsLikeLocTwoDayTwo.text('Feels Like ' + data.list[15].main.feels_like + ' °F')
-      $weatherLocTwoDayTwo.text(data.list[15].weather[0].main)
+      $weatherLocTwoDayTwo.text(data.list[15].weather[0].main + ": " + data.list[7].weather[0].description)
       $windSpeedLocTwoDayTwo.text('Wind Speeds: ' + data.list[15].wind.speed + ' MPH')
       $forecastLocTwoDayTwo.append($dateTimeLocTwoDayTwo)
       $forecastLocTwoDayTwo.append($tempLocTwoDayTwo)
@@ -233,7 +254,7 @@ function handleGetDataLocTwo(e){
       $dateTimeLocTwoDayThree.text(data.list[23].dt_txt)
       $tempLocTwoDayThree.text('Temp: ' + data.list[23].main.temp + ' °F')
       $feelsLikeLocTwoDayThree.text('Feels Like ' + data.list[23].main.feels_like + ' °F')
-      $weatherLocTwoDayThree.text(data.list[23].weather[0].main)
+      $weatherLocTwoDayThree.text(data.list[23].weather[0].main + ": " + data.list[7].weather[0].description)
       $windSpeedLocTwoDayThree.text('Wind Speeds: ' + data.list[23].wind.speed + ' MPH')
       $forecastLocTwoDayThree.append($dateTimeLocTwoDayThree)
       $forecastLocTwoDayThree.append($tempLocTwoDayThree)
@@ -244,7 +265,7 @@ function handleGetDataLocTwo(e){
       $dateTimeLocTwoDayFour.text(data.list[31].dt_txt)
       $tempLocTwoDayFour.text('Temp: ' + data.list[31].main.temp + ' °F')
       $feelsLikeLocTwoDayFour.text('Feels Like ' + data.list[31].main.feels_like + ' °F')
-      $weatherLocTwoDayFour.text(data.list[31].weather[0].main)
+      $weatherLocTwoDayFour.text(data.list[31].weather[0].main + ": " + data.list[7].weather[0].description)
       $windSpeedLocTwoDayFour.text('Wind Speeds: ' + data.list[31].wind.speed + ' MPH')
       $forecastLocTwoDayFour.append($dateTimeLocTwoDayFour)
       $forecastLocTwoDayFour.append($tempLocTwoDayFour)
@@ -273,7 +294,7 @@ function handleGetDataLocThree(e){
       $dateTimeLocThreeDayOne.text(data.list[7].dt_txt)
       $tempLocThreeDayOne.text('Temp: ' + data.list[7].main.temp + ' °F')
       $feelsLikeLocThreeDayOne.text('Feels Like ' + data.list[7].main.feels_like + ' °F')
-      $weatherLocThreeDayOne.text(data.list[7].weather[0].main)
+      $weatherLocThreeDayOne.text(data.list[7].weather[0].main + ": " + data.list[7].weather[0].description)
       $windSpeedLocThreeDayOne.text('Wind Speeds: ' + data.list[7].wind.speed + ' MPH')
       $forecastLocThreeDayOne.append($dateTimeLocThreeDayOne)
       $forecastLocThreeDayOne.append($tempLocThreeDayOne)
@@ -284,7 +305,7 @@ function handleGetDataLocThree(e){
       $dateTimeLocThreeDayTwo.text(data.list[15].dt_txt)
       $tempLocThreeDayTwo.text('Temp: ' + data.list[15].main.temp + ' °F')
       $feelsLikeLocThreeDayTwo.text('Feels Like ' + data.list[15].main.feels_like + ' °F')
-      $weatherLocThreeDayTwo.text(data.list[15].weather[0].main)
+      $weatherLocThreeDayTwo.text(data.list[15].weather[0].main + ": " + data.list[15].weather[0].description)
       $windSpeedLocThreeDayTwo.text('Wind Speeds: ' + data.list[15].wind.speed + ' MPH')
       $forecastLocThreeDayTwo.append($dateTimeLocThreeDayTwo)
       $forecastLocThreeDayTwo.append($tempLocThreeDayTwo)
@@ -295,7 +316,7 @@ function handleGetDataLocThree(e){
       $dateTimeLocThreeDayThree.text(data.list[23].dt_txt)
       $tempLocThreeDayThree.text('Temp: ' + data.list[23].main.temp + ' °F')
       $feelsLikeLocThreeDayThree.text('Feels Like ' + data.list[23].main.feels_like + ' °F')
-      $weatherLocThreeDayThree.text(data.list[23].weather[0].main)
+      $weatherLocThreeDayThree.text(data.list[23].weather[0].main + ": " + data.list[15].weather[0].description)
       $windSpeedLocThreeDayThree.text('Wind Speeds: ' + data.list[23].wind.speed + ' MPH')
       $forecastLocThreeDayThree.append($dateTimeLocThreeDayThree)
       $forecastLocThreeDayThree.append($tempLocThreeDayThree)
@@ -306,7 +327,7 @@ function handleGetDataLocThree(e){
       $dateTimeLocThreeDayFour.text(data.list[31].dt_txt)
       $tempLocThreeDayFour.text('Temp: ' + data.list[31].main.temp + ' °F')
       $feelsLikeLocThreeDayFour.text('Feels Like ' + data.list[31].main.feels_like + ' °F')
-      $weatherLocThreeDayFour.text(data.list[31].weather[0].main)
+      $weatherLocThreeDayFour.text(data.list[31].weather[0].main + ": " + data.list[15].weather[0].description)
       $windSpeedLocThreeDayFour.text('Wind Speeds: ' + data.list[31].wind.speed + ' MPH')
       $forecastLocThreeDayFour.append($dateTimeLocThreeDayFour)
       $forecastLocThreeDayFour.append($tempLocThreeDayFour)
@@ -322,7 +343,7 @@ function handleGetDataLocThree(e){
   }
 
 
-// function for Third Location
+// function for fourth Location
   function handleGetDataLocFour(e){
 
     event.preventDefault()
@@ -335,13 +356,46 @@ function handleGetDataLocThree(e){
         $dateTimeLocFourDayOne.text(data.list[7].dt_txt)
         $tempLocFourDayOne.text('Temp: ' + data.list[7].main.temp + ' °F')
         $feelsLikeLocFourDayOne.text('Feels Like ' + data.list[7].main.feels_like + ' °F')
-        $weatherLocFourDayOne.text(data.list[7].weather[0].main)
+        $weatherLocFourDayOne.text(data.list[7].weather[0].main + ": " + data.list[7].weather[0].description)
         $windSpeedLocFourDayOne.text('Wind Speeds: ' + data.list[7].wind.speed + ' MPH')
         $forecastLocFourDayOne.append($dateTimeLocFourDayOne)
         $forecastLocFourDayOne.append($tempLocFourDayOne)
         $forecastLocFourDayOne.append($feelsLikeLocFourDayOne)
         $forecastLocFourDayOne.append($weatherLocFourDayOne)
         $forecastLocFourDayOne.append($windSpeedLocFourDayOne)
+        // Day Two 
+        $dateTimeLocFourDayTwo.text(data.list[15].dt_txt)
+        $tempLocFourDayTwo.text('Temp: ' + data.list[15].main.temp + ' °F')
+        $feelsLikeLocFourDayTwo.text('Feels Like ' + data.list[15].main.feels_like + ' °F')
+        $weatherLocFourDayTwo.text(data.list[15].weather[0].main + ": " + data.list[15].weather[0].description)
+        $windSpeedLocFourDayTwo.text('Wind Speeds: ' + data.list[15].wind.speed + ' MPH')
+        $forecastLocFourDayTwo.append($dateTimeLocFourDayTwo)
+        $forecastLocFourDayTwo.append($tempLocFourDayTwo)
+        $forecastLocFourDayTwo.append($feelsLikeLocFourDayTwo)
+        $forecastLocFourDayTwo.append($weatherLocFourDayTwo)
+        $forecastLocFourDayTwo.append($windSpeedLocFourDayTwo)
+        // Day Three
+        $dateTimeLocFourDayThree.text(data.list[23].dt_txt)
+        $tempLocFourDayThree.text('Temp: ' + data.list[23].main.temp + ' °F')
+        $feelsLikeLocFourDayThree.text('Feels Like ' + data.list[23].main.feels_like + ' °F')
+        $weatherLocFourDayThree.text(data.list[23].weather[0].main + ": " + data.list[23].weather[0].description)
+        $windSpeedLocFourDayThree.text('Wind Speeds: ' + data.list[23].wind.speed + ' MPH')
+        $forecastLocFourDayThree.append($dateTimeLocFourDayThree)
+        $forecastLocFourDayThree.append($tempLocFourDayThree)
+        $forecastLocFourDayThree.append($feelsLikeLocFourDayThree)
+        $forecastLocFourDayThree.append($weatherLocFourDayThree)
+        $forecastLocFourDayThree.append($windSpeedLocFourDayThree)
+        // day four
+        $dateTimeLocFourDayFour.text(data.list[31].dt_txt)
+        $tempLocFourDayFour.text('Temp: ' + data.list[31].main.temp + ' °F')
+        $feelsLikeLocFourDayFour.text('Feels Like ' + data.list[31].main.feels_like + ' °F')
+        $weatherLocFourDayFour.text(data.list[31].weather[0].main + ": " + data.list[31].weather[0].description)
+        $windSpeedLocFourDayFour.text('Wind Speeds: ' + data.list[31].wind.speed + ' MPH')
+        $forecastLocFourDayFour.append($dateTimeLocFourDayFour)
+        $forecastLocFourDayFour.append($tempLocFourDayFour)
+        $forecastLocFourDayFour.append($feelsLikeLocFourDayFour)
+        $forecastLocFourDayFour.append($weatherLocFourDayFour)
+        $forecastLocFourDayFour.append($windSpeedLocFourDayFour)
       },
       function(error) {
        console.log('something is wrong')
