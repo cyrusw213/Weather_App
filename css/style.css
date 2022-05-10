@@ -1,8 +1,11 @@
 main{
     margin: 0;
+    border: 0;
+    padding: 0;
+    text-align: center;
     display:grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50% ;
+    grid-template-rows: 100% 100% ;
     grid-template-areas: 
         "sect1 sect2"
         "sect3 sect4";
@@ -10,7 +13,8 @@ main{
 
 #locOne {
     grid-area: sect1;
-    background-color: green
+    background-color: green;
+
 }
 
 #locTwo {
@@ -27,4 +31,13 @@ main{
 #locFour {
     grid-area: sect4;
     background-color: red;
+}
+
+#firstLocLists {
+    display: flex;
+    vertical-align: center;
+    width: fit-content;
+    font-size: 12px;
+    text-align: center;
+
 }
