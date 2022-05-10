@@ -1,5 +1,5 @@
 # Name
-**Where Should We Go This Weekend?**
+**Weather Side by Side**
 
 ## Description & Features
 This application enables users to check the weather forecast for up to four different zip codes at once. Using the forecasts in front of them they can decide where they want to visit that weekend. 
@@ -11,9 +11,14 @@ This application enables users to check the weather forecast for up to four diff
 HTML, CSS, JavaScript, jQuery
 
 ## Future Enhancements
-I would like to update this app to make suggestions based on the weather. Maybe it has a dropdown initially asking what activities you want to do that weekend. If you select ski/snowboard then it would recommend you visit the colder/snowier zip code. If you say you want to relax and swim it would recommend a drier and warmer climate. 
+- I would like to update this app to make suggestions based on the weather. Maybe it has a dropdown initially asking what activities you want to do that weekend. If you select ski/snowboard then it would recommend you visit the colder/snowier zip code. If you say you want to relax and swim it would recommend a drier and warmer climate. 
 
-The API Request by Zip Code will be deprecated soon according to OpenWeather's documentation. To get ready for that I will need to also implement their Geocoding API which will allow me to convert a user's Zip code into the Lat & Long parameters needed for the 16 Day Forecast API call.
+- The API Request by Zip Code will be deprecated soon according to OpenWeather's documentation. To get ready for that I will need to also implement their Geocoding API which will allow me to convert a user's Zip code into the Lat & Long parameters needed for the 16 Day Forecast API call.
+
+- normalize the times that it pulls so it shows each days forecast for noon or 3 pm. currently it takes the seventh index as the first forecast, this always shows at least 24 hours after the pull but depending on when the user checks the forecast it will give either midnight, 3 am, 6 am, 9 am, noon, 3 pm, 6 pm, 9 pm
+
+- add state to the city that shows up
 
 ## References
-Data Courtesy of [OpenWeather's 16 Day Forecast](https://openweathermap.org/forecast16). Also see their built in [API Request by Zip Code](https://openweathermap.org/forecast16#zip16)
+Data Courtesy of [OpenWeather's 5 Day / 3 Hour Forecast](https://openweathermap.org/forecast5). Specifically, their built in [API Request by Zip Code](https://openweathermap.org/forecast5#zip5)
+    
