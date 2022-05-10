@@ -38,6 +38,23 @@ main{
     vertical-align: center;
     width: fit-content;
     font-size: 12px;
-    text-align: center;
+    text-align: left;
+
+}
+
+#secondLocLists {
+    display: flex;
+    vertical-align: center;
+    width: fit-content;
+    font-size: 12px;
+    text-align: left;
+
+}
+#thirdLocLists {
+    display: flex;
+    vertical-align: center;
+    width: fit-content;
+    font-size: 12px;
+    text-align: left;
 
 }

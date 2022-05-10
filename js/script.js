@@ -60,11 +60,46 @@ const $tempLocTwoDayOne = $('<li>')
 const $feelsLikeLocTwoDayOne = $('<li>')
 const $weatherLocTwoDayOne = $('<li>')
 const $windSpeedLocTwoDayOne = $('<li>')
+// location two day two 
+const $dateTimeLocTwoDayTwo = $('<li>')
+const $forecastLocTwoDayTwo = $('.forecastLocTwoDayTwo')
+const $tempLocTwoDayTwo = $('<li>')
+const $feelsLikeLocTwoDayTwo = $('<li>')
+const $weatherLocTwoDayTwo = $('<li>')
+const $windSpeedLocTwoDayTwo = $('<li>')
+// location two day three
+const $dateTimeLocTwoDayThree = $('<li>')
+const $forecastLocTwoDayThree = $('.forecastLocTwoDayThree')
+const $tempLocTwoDayThree = $('<li>')
+const $feelsLikeLocTwoDayThree = $('<li>')
+const $weatherLocTwoDayThree = $('<li>')
+const $windSpeedLocTwoDayThree = $('<li>')
+// location two day four
+const $dateTimeLocTwoDayFour = $('<li>')
+const $forecastLocTwoDayFour = $('.forecastLocTwoDayFour')
+const $tempLocTwoDayFour = $('<li>')
+const $feelsLikeLocTwoDayFour = $('<li>')
+const $weatherLocTwoDayFour = $('<li>')
+const $windSpeedLocTwoDayFour = $('<li>')
+// location three day one element refs 
+const $cityThree = $('.cityThree');
+const $inputThree = $('.inputThree');
+const $buttonThree = $('#buttonThree');
+const $dateTimeLocThreeDayOne = $('<li>')
+const $forecastLocThreeDayOne = $('.forecastLocThreeDayOne')
+const $tempLocThreeDayOne = $('<li>')
+const $feelsLikeLocThreeDayOne = $('<li>')
+const $weatherLocThreeDayOne = $('<li>')
+const $windSpeedLocThreeDayOne = $('<li>')
+
+
 
 // event listeners
 $buttonOne.on('submit', handleGetData)
 // event listener for location 2
 $buttonTwo.on('submit', handleGetDataLocTwo)
+// event listener for location 3
+$buttonThree.on('submit', handleGetDataLocThree)
 
 
 // functions
@@ -149,6 +184,65 @@ function handleGetDataLocTwo(e){
       $forecastLocTwoDayOne.append($feelsLikeLocTwoDayOne)
       $forecastLocTwoDayOne.append($weatherLocTwoDayOne)
       $forecastLocTwoDayOne.append($windSpeedLocTwoDayOne)
+      // second location day two 
+      $dateTimeLocTwoDayTwo.text(data.list[15].dt_txt)
+      $tempLocTwoDayTwo.text('Temp: ' + data.list[15].main.temp + ' °F')
+      $feelsLikeLocTwoDayTwo.text('Feels Like ' + data.list[15].main.feels_like + ' °F')
+      $weatherLocTwoDayTwo.text(data.list[15].weather[0].main)
+      $windSpeedLocTwoDayTwo.text('Wind Speeds: ' + data.list[15].wind.speed + ' MPH')
+      $forecastLocTwoDayTwo.append($dateTimeLocTwoDayTwo)
+      $forecastLocTwoDayTwo.append($tempLocTwoDayTwo)
+      $forecastLocTwoDayTwo.append($feelsLikeLocTwoDayTwo)
+      $forecastLocTwoDayTwo.append($weatherLocTwoDayTwo)
+      $forecastLocTwoDayTwo.append($windSpeedLocTwoDayTwo)
+      // second location day three 
+      $dateTimeLocTwoDayThree.text(data.list[23].dt_txt)
+      $tempLocTwoDayThree.text('Temp: ' + data.list[23].main.temp + ' °F')
+      $feelsLikeLocTwoDayThree.text('Feels Like ' + data.list[23].main.feels_like + ' °F')
+      $weatherLocTwoDayThree.text(data.list[23].weather[0].main)
+      $windSpeedLocTwoDayThree.text('Wind Speeds: ' + data.list[23].wind.speed + ' MPH')
+      $forecastLocTwoDayThree.append($dateTimeLocTwoDayThree)
+      $forecastLocTwoDayThree.append($tempLocTwoDayThree)
+      $forecastLocTwoDayThree.append($feelsLikeLocTwoDayThree)
+      $forecastLocTwoDayThree.append($weatherLocTwoDayThree)
+      $forecastLocTwoDayThree.append($windSpeedLocTwoDayThree)
+      // second location day four 
+      $dateTimeLocTwoDayFour.text(data.list[31].dt_txt)
+      $tempLocTwoDayFour.text('Temp: ' + data.list[31].main.temp + ' °F')
+      $feelsLikeLocTwoDayFour.text('Feels Like ' + data.list[31].main.feels_like + ' °F')
+      $weatherLocTwoDayFour.text(data.list[31].weather[0].main)
+      $windSpeedLocTwoDayFour.text('Wind Speeds: ' + data.list[31].wind.speed + ' MPH')
+      $forecastLocTwoDayFour.append($dateTimeLocTwoDayFour)
+      $forecastLocTwoDayFour.append($tempLocTwoDayFour)
+      $forecastLocTwoDayFour.append($feelsLikeLocTwoDayFour)
+      $forecastLocTwoDayFour.append($weatherLocTwoDayFour)
+      $forecastLocTwoDayFour.append($windSpeedLocTwoDayFour)
+    },
+    function(error) {
+     console.log('something is wrong')
+     console.log(error)
+    })
+}
+  // function for Third Location
+function handleGetDataLocThree(e){
+
+  event.preventDefault()
+  console.log($inputThree.val())
+  const finalInputThree = $inputThree.val() + ',us&appid=672f4a88ea67ac0ba14af76fab150178'
+  $.ajax(URL + finalInputThree).then(function(data) {
+      console.log('working')
+      console.log(data)
+      $cityThree.text('Forecast for ' + data.city.name)
+      $dateTimeLocThreeDayOne.text(data.list[7].dt_txt)
+      $tempLocThreeDayOne.text('Temp: ' + data.list[7].main.temp + ' °F')
+      $feelsLikeLocThreeDayOne.text('Feels Like ' + data.list[7].main.feels_like + ' °F')
+      $weatherLocThreeDayOne.text(data.list[7].weather[0].main)
+      $windSpeedLocThreeDayOne.text('Wind Speeds: ' + data.list[7].wind.speed + ' MPH')
+      $forecastLocThreeDayOne.append($dateTimeLocThreeDayOne)
+      $forecastLocThreeDayOne.append($tempLocThreeDayOne)
+      $forecastLocThreeDayOne.append($feelsLikeLocThreeDayOne)
+      $forecastLocThreeDayOne.append($weatherLocThreeDayOne)
+      $forecastLocThreeDayOne.append($windSpeedLocThreeDayOne)
     },
     function(error) {
      console.log('something is wrong')
