@@ -1,3 +1,6 @@
+body {
+    background-color: black;
+}
 main{
     margin: 0;
     border: 0;
@@ -9,6 +12,12 @@ main{
     grid-template-areas: 
         "sect1 sect2"
         "sect3 sect4";
+}
+
+header {
+    background-color:black;
+    color: white;
+    text-align: center
 }
 
 #locOne {
@@ -37,7 +46,7 @@ main{
     display: flex;
     vertical-align: center;
     width: fit-content;
-    font-size: 12px;
+    font-size: 13px;
     text-align: left;
 
 }
@@ -46,7 +55,7 @@ main{
     display: flex;
     vertical-align: center;
     width: fit-content;
-    font-size: 12px;
+    font-size: 13px;
     text-align: left;
 
 }
@@ -54,7 +63,15 @@ main{
     display: flex;
     vertical-align: center;
     width: fit-content;
-    font-size: 12px;
+    font-size: 13px;
+    text-align: left;
+
+}
+#fourthLocLists {
+    display: flex;
+    vertical-align: center;
+    width: fit-content;
+    font-size: 13px;
     text-align: left;
 
 }

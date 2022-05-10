@@ -112,6 +112,17 @@ const $tempLocThreeDayFour = $('<li>')
 const $feelsLikeLocThreeDayFour = $('<li>')
 const $weatherLocThreeDayFour = $('<li>')
 const $windSpeedLocThreeDayFour = $('<li>')
+// location four day one element refs
+const $cityFour = $('.cityFour');
+const $inputFour = $('.inputFour');
+const $buttonFour = $('#buttonFour');
+const $dateTimeLocFourDayOne = $('<li>')
+const $forecastLocFourDayOne = $('.forecastLocFourDayOne')
+const $tempLocFourDayOne = $('<li>')
+const $feelsLikeLocFourDayOne = $('<li>')
+const $weatherLocFourDayOne = $('<li>')
+const $windSpeedLocFourDayOne = $('<li>')
+
 
 // event listeners
 $buttonOne.on('submit', handleGetData)
@@ -119,6 +130,9 @@ $buttonOne.on('submit', handleGetData)
 $buttonTwo.on('submit', handleGetDataLocTwo)
 // event listener for location 3
 $buttonThree.on('submit', handleGetDataLocThree)
+// event listener for location 4
+$buttonFour.on('submit', handleGetDataLocFour)
+
 
 
 // functions
@@ -183,6 +197,7 @@ function handleGetData(e){
  
 }
 
+
 // function for Second Location
 function handleGetDataLocTwo(e){
 
@@ -243,7 +258,9 @@ function handleGetDataLocTwo(e){
      console.log(error)
     })
 }
-  // function for Third Location
+
+
+// function for Third Location
 function handleGetDataLocThree(e){
 
   event.preventDefault()
@@ -303,3 +320,31 @@ function handleGetDataLocThree(e){
      console.log(error)
     })
   }
+
+
+// function for Third Location
+  function handleGetDataLocFour(e){
+
+    event.preventDefault()
+    console.log($inputFour.val())
+    const finalInputFour = $inputFour.val() + ',us&appid=672f4a88ea67ac0ba14af76fab150178'
+    $.ajax(URL + finalInputFour).then(function(data) {
+        console.log('working')
+        console.log(data)
+        $cityFour.text('Forecast for ' + data.city.name)
+        $dateTimeLocFourDayOne.text(data.list[7].dt_txt)
+        $tempLocFourDayOne.text('Temp: ' + data.list[7].main.temp + ' °F')
+        $feelsLikeLocFourDayOne.text('Feels Like ' + data.list[7].main.feels_like + ' °F')
+        $weatherLocFourDayOne.text(data.list[7].weather[0].main)
+        $windSpeedLocFourDayOne.text('Wind Speeds: ' + data.list[7].wind.speed + ' MPH')
+        $forecastLocFourDayOne.append($dateTimeLocFourDayOne)
+        $forecastLocFourDayOne.append($tempLocFourDayOne)
+        $forecastLocFourDayOne.append($feelsLikeLocFourDayOne)
+        $forecastLocFourDayOne.append($weatherLocFourDayOne)
+        $forecastLocFourDayOne.append($windSpeedLocFourDayOne)
+      },
+      function(error) {
+       console.log('something is wrong')
+       console.log(error)
+      })
+    }
