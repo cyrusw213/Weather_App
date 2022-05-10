@@ -17,12 +17,13 @@
     <main>
         <div id = 'locOne'>
             <h2>First Location</h2>
-            <form>
+            <form id = 'buttonOne'>
                 <input class = 'inputOne' placeholder = "enter zip code">
-                <button class = 'buttonOne' type="submit"> submit </button>
+                <button class type="submit"> submit </button>
             </form>
-            <h4>Forecast</h4>
-              <Div id = 'firstLocLists'>  
+            <h4 class = 'cityOne'></h4>
+              <Div id = 'firstLocLists'>
+                      
                     <ul class = 'forecastDayOne'></ul>
                     <ul class = 'forecastDayTwo'></ul>
                     <ul class = 'forecastDayThree'></ul>
@@ -31,8 +32,14 @@
         </div>
         <div id = 'locTwo'>
             <h2>Second Location</h2>
-            <input class = inputTwo placeholder = "enter zip code">
-            <button class = buttonTwo type="submit"> submit </button>
+            <form id = 'buttonTwo'>
+                <input class = 'inputTwo' placeholder = 'enter zip code'>
+                <button class type="submit"> submit </button>
+                    <ul class = 'forecastLocTwoDayOne'></ul>
+                    <ul class = ''></ul>
+                    <ul class = ''></ul>
+                    <ul class = ''></ul>
+            </form>
             <h4>Forecast</h4>
 
         </div>

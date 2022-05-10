@@ -21,8 +21,8 @@ const URL = "https://api.openweathermap.org/data/2.5/forecast?units=imperial&zip
 
 // element references
 const $cityOne = $('.cityOne');
-const $inputOne = $('input')
-const $form = $('form');
+const $inputOne = $('.inputOne')
+const $buttonOne = $('#buttonOne');
 const $dateTimeOne = $('<li>')
 const $forecastDayOne = $('.forecastDayOne')
 const $tempOneDayOne = $('<li>')
@@ -50,12 +50,25 @@ const $feelsLikeOneDayFour = $('<li>')
 const $weatherFour = $('<li>')
 const $windSpeedDayFour = $('<li>')
 const $tempOneDayFour = $('<li>')
+// location two day one element refs 
+const $cityTwo = $('.cityTwo');
+const $inputTwo = $('.inputTwo');
+const $buttonTwo = $('#buttonTwo');
+const $dateTimeLocTwoDayOne = $('<li>')
+const $forecastLocTwoDayOne = $('.forecastLocTwoDayOne')
+const $tempLocTwoDayOne = $('<li>')
+const $feelsLikeLocTwoDayOne = $('<li>')
+const $weatherLocTwoDayOne = $('<li>')
+const $windSpeedLocTwoDayOne = $('<li>')
 
 // event listeners
-$form.on('submit', handleGetData)
+$buttonOne.on('submit', handleGetData)
+// event listener for location 2
+$buttonTwo.on('submit', handleGetDataLocTwo)
+
 
 // functions
-
+// function for First Location
 function handleGetData(e){
 
   event.preventDefault()
@@ -64,7 +77,7 @@ function handleGetData(e){
   $.ajax(URL + finalInputOne).then(function(data) {
       console.log('working')
       console.log(data)
-      $cityOne.text(data.city.name)
+      $cityOne.text('Forecast for ' + data.city.name)
       $dateTimeOne.text(data.list[7].dt_txt)
       $tempOneDayOne.text('Temp: ' + data.list[7].main.temp + ' °F')
       $feelsLikeOneDayOne.text('Feels Like ' + data.list[7].main.feels_like + ' °F')
@@ -116,3 +129,29 @@ function handleGetData(e){
  
 }
 
+// function for Second Location
+function handleGetDataLocTwo(e){
+
+  event.preventDefault()
+  console.log($inputTwo.val())
+  const finalInputTwo = $inputTwo.val() + ',us&appid=672f4a88ea67ac0ba14af76fab150178'
+  $.ajax(URL + finalInputTwo).then(function(data) {
+      console.log('working')
+      console.log(data)
+      $cityTwo.text('Forecast for ' + data.city.name)
+      $dateTimeLocTwoDayOne.text(data.list[7].dt_txt)
+      $tempLocTwoDayOne.text('Temp: ' + data.list[7].main.temp + ' °F')
+      $feelsLikeLocTwoDayOne.text('Feels Like ' + data.list[7].main.feels_like + ' °F')
+      $weatherLocTwoDayOne.text(data.list[7].weather[0].main)
+      $windSpeedLocTwoDayOne.text('Wind Speeds: ' + data.list[7].wind.speed + ' MPH')
+      $forecastLocTwoDayOne.append($dateTimeLocTwoDayOne)
+      $forecastLocTwoDayOne.append($tempLocTwoDayOne)
+      $forecastLocTwoDayOne.append($feelsLikeLocTwoDayOne)
+      $forecastLocTwoDayOne.append($weatherLocTwoDayOne)
+      $forecastLocTwoDayOne.append($windSpeedLocTwoDayOne)
+    },
+    function(error) {
+     console.log('something is wrong')
+     console.log(error)
+    })
+  }
