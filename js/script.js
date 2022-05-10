@@ -91,8 +91,27 @@ const $tempLocThreeDayOne = $('<li>')
 const $feelsLikeLocThreeDayOne = $('<li>')
 const $weatherLocThreeDayOne = $('<li>')
 const $windSpeedLocThreeDayOne = $('<li>')
-
-
+// location three day two element refs 
+const $dateTimeLocThreeDayTwo = $('<li>')
+const $forecastLocThreeDayTwo = $('.forecastLocThreeDayTwo')
+const $tempLocThreeDayTwo = $('<li>')
+const $feelsLikeLocThreeDayTwo = $('<li>')
+const $weatherLocThreeDayTwo = $('<li>')
+const $windSpeedLocThreeDayTwo = $('<li>')
+// location three day three element refs 
+const $dateTimeLocThreeDayThree = $('<li>')
+const $forecastLocThreeDayThree = $('.forecastLocThreeDayThree')
+const $tempLocThreeDayThree = $('<li>')
+const $feelsLikeLocThreeDayThree = $('<li>')
+const $weatherLocThreeDayThree = $('<li>')
+const $windSpeedLocThreeDayThree = $('<li>')
+// location three day three element refs 
+const $dateTimeLocThreeDayFour = $('<li>')
+const $forecastLocThreeDayFour = $('.forecastLocThreeDayFour')
+const $tempLocThreeDayFour = $('<li>')
+const $feelsLikeLocThreeDayFour = $('<li>')
+const $weatherLocThreeDayFour = $('<li>')
+const $windSpeedLocThreeDayFour = $('<li>')
 
 // event listeners
 $buttonOne.on('submit', handleGetData)
@@ -217,6 +236,7 @@ function handleGetDataLocTwo(e){
       $forecastLocTwoDayFour.append($feelsLikeLocTwoDayFour)
       $forecastLocTwoDayFour.append($weatherLocTwoDayFour)
       $forecastLocTwoDayFour.append($windSpeedLocTwoDayFour)
+      
     },
     function(error) {
      console.log('something is wrong')
@@ -243,6 +263,40 @@ function handleGetDataLocThree(e){
       $forecastLocThreeDayOne.append($feelsLikeLocThreeDayOne)
       $forecastLocThreeDayOne.append($weatherLocThreeDayOne)
       $forecastLocThreeDayOne.append($windSpeedLocThreeDayOne)
+      // third location day two 
+      $dateTimeLocThreeDayTwo.text(data.list[15].dt_txt)
+      $tempLocThreeDayTwo.text('Temp: ' + data.list[15].main.temp + ' °F')
+      $feelsLikeLocThreeDayTwo.text('Feels Like ' + data.list[15].main.feels_like + ' °F')
+      $weatherLocThreeDayTwo.text(data.list[15].weather[0].main)
+      $windSpeedLocThreeDayTwo.text('Wind Speeds: ' + data.list[15].wind.speed + ' MPH')
+      $forecastLocThreeDayTwo.append($dateTimeLocThreeDayTwo)
+      $forecastLocThreeDayTwo.append($tempLocThreeDayTwo)
+      $forecastLocThreeDayTwo.append($feelsLikeLocThreeDayTwo)
+      $forecastLocThreeDayTwo.append($weatherLocThreeDayTwo)
+      $forecastLocThreeDayTwo.append($windSpeedLocThreeDayTwo)
+      // third location day three 
+      $dateTimeLocThreeDayThree.text(data.list[23].dt_txt)
+      $tempLocThreeDayThree.text('Temp: ' + data.list[23].main.temp + ' °F')
+      $feelsLikeLocThreeDayThree.text('Feels Like ' + data.list[23].main.feels_like + ' °F')
+      $weatherLocThreeDayThree.text(data.list[23].weather[0].main)
+      $windSpeedLocThreeDayThree.text('Wind Speeds: ' + data.list[23].wind.speed + ' MPH')
+      $forecastLocThreeDayThree.append($dateTimeLocThreeDayThree)
+      $forecastLocThreeDayThree.append($tempLocThreeDayThree)
+      $forecastLocThreeDayThree.append($feelsLikeLocThreeDayThree)
+      $forecastLocThreeDayThree.append($weatherLocThreeDayThree)
+      $forecastLocThreeDayThree.append($windSpeedLocThreeDayThree)
+      // third location day four
+      $dateTimeLocThreeDayFour.text(data.list[31].dt_txt)
+      $tempLocThreeDayFour.text('Temp: ' + data.list[31].main.temp + ' °F')
+      $feelsLikeLocThreeDayFour.text('Feels Like ' + data.list[31].main.feels_like + ' °F')
+      $weatherLocThreeDayFour.text(data.list[31].weather[0].main)
+      $windSpeedLocThreeDayFour.text('Wind Speeds: ' + data.list[31].wind.speed + ' MPH')
+      $forecastLocThreeDayFour.append($dateTimeLocThreeDayFour)
+      $forecastLocThreeDayFour.append($tempLocThreeDayFour)
+      $forecastLocThreeDayFour.append($feelsLikeLocThreeDayFour)
+      $forecastLocThreeDayFour.append($weatherLocThreeDayFour)
+      $forecastLocThreeDayFour.append($windSpeedLocThreeDayFour)
+
     },
     function(error) {
      console.log('something is wrong')
