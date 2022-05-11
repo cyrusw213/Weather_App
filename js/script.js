@@ -16,6 +16,33 @@
 
 
 // clear buttons - should be using .empty()
+const $clearOne = $('.clearOne')
+
+$clearOne.click(function(){
+  $('#firstLocLists').empty()
+});
+
+// clear button location two 
+const $clearTwo = $('.clearTwo')
+
+$clearTwo.click(function(){
+  $('#secondLocLists').empty()
+});
+
+// clear button location three
+const $clearThree = $('.clearThree')
+
+$clearThree.click(function(){
+  $('#thirdLocLists').empty()
+});
+
+// clear button location three
+const $clearFour = $('.clearFour')
+
+$clearFour.click(function(){
+  $('#fourthLocLists').empty()
+});
+
 
 // variables
 const URL = "https://api.openweathermap.org/data/2.5/forecast?units=imperial&zip="
