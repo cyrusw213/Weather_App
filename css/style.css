@@ -20,11 +20,16 @@ header {
     text-align: center
 }
 
+.clearAll {
+    left: 0;
+    
+}
+
 #locOne {
     grid-area: sect1;
     background-color: green;
 
-}
+}               
 
 
 
@@ -51,8 +56,15 @@ header {
     flex-wrap: wrap;
     font-size: 13px;
     text-align: left;
-
 }
+
+#buttons {
+    display: flex;
+    justify-content: center;
+}
+
+
+
 
 #secondLocLists {
     display: flex;

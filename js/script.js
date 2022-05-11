@@ -15,6 +15,8 @@
 // console.log(promise)
 
 
+// clear buttons - should be using .empty()
+
 // variables
 const URL = "https://api.openweathermap.org/data/2.5/forecast?units=imperial&zip="
 
