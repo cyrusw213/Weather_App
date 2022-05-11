@@ -7,8 +7,8 @@ main{
     padding: 0;
     text-align: center;
     display:grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100% 100% ;
+    grid-template-columns: 49vw 49vw;
+    grid-template-rows: 50vh 50vh;
     grid-template-areas: 
         "sect1 sect2"
         "sect3 sect4";
@@ -47,6 +47,7 @@ header {
 #firstLocLists {
     display: flex;
     vertical-align: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     font-size: 13px;
     text-align: left;
@@ -56,6 +57,7 @@ header {
 #secondLocLists {
     display: flex;
     vertical-align: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     font-size: 13px;
     text-align: left;
@@ -64,6 +66,7 @@ header {
 #thirdLocLists {
     display: flex;
     vertical-align: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     font-size: 13px;
     text-align: left;
@@ -72,6 +75,7 @@ header {
 #fourthLocLists {
     display: flex;
     vertical-align: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     font-size: 13px;
     text-align: left;
