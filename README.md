@@ -10,6 +10,9 @@ This application enables users to check the weather forecast for up to four diff
 ## Technologies Used
 HTML, CSS, JavaScript, jQuery
 
+## Getting Started
+[Click Here](https://timely-florentine-3ec0a2.netlify.app/) to deploy the app!
+
 ## Future Enhancements
 - I would like to update this app to make suggestions based on the weather. Maybe it has a dropdown initially asking what activities you want to do that weekend. If you select ski/snowboard then it would recommend you visit the colder/snowier zip code. If you say you want to relax and swim it would recommend a drier and warmer climate. 
 
