@@ -26,6 +26,8 @@ header {
 
 }
 
+
+
 #locTwo {
     grid-area: sect2;
     background-color: yellow
@@ -45,7 +47,7 @@ header {
 #firstLocLists {
     display: flex;
     vertical-align: center;
-    width: fit-content;
+    flex-wrap: wrap;
     font-size: 13px;
     text-align: left;
 
@@ -54,7 +56,7 @@ header {
 #secondLocLists {
     display: flex;
     vertical-align: center;
-    width: fit-content;
+    flex-wrap: wrap;
     font-size: 13px;
     text-align: left;
 
@@ -62,7 +64,7 @@ header {
 #thirdLocLists {
     display: flex;
     vertical-align: center;
-    width: fit-content;
+    flex-wrap: wrap;
     font-size: 13px;
     text-align: left;
 
@@ -70,8 +72,14 @@ header {
 #fourthLocLists {
     display: flex;
     vertical-align: center;
-    width: fit-content;
+    flex-wrap: wrap;
     font-size: 13px;
     text-align: left;
 
 }
+
+.clearAll { 
+    position: absolute;
+    top: 0;
+}
+
