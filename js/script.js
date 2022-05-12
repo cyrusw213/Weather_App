@@ -20,6 +20,8 @@ const $clearOne = $('.clearOne')
 
 $clearOne.click(function(){
   $('#firstLocLists').empty()
+  $($cityOne).empty()
+  $($inputOne).val('')
 });
 
 // clear button location two 
@@ -27,6 +29,8 @@ const $clearTwo = $('.clearTwo')
 
 $clearTwo.click(function(){
   $('#secondLocLists').empty()
+  $($cityTwo).empty()
+  $($inputTwo).val('')
 });
 
 // clear button location three
@@ -34,13 +38,17 @@ const $clearThree = $('.clearThree')
 
 $clearThree.click(function(){
   $('#thirdLocLists').empty()
+  $($cityThree).empty()
+  $($inputThree).val('')
 });
 
 // clear button location three
 const $clearFour = $('.clearFour')
 
 $clearFour.click(function(){
-  $('#fourthLocLists').empty()
+  $('#fourthLocLists').empty()                
+  $($cityFour).empty()
+  $($inputFour).val('')
 });
 
 
