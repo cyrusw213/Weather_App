@@ -28,9 +28,6 @@ $clearAll.click(function(){
   $('#thirdLocLists').empty()
   $($cityThree).empty()
   $($inputThree).val('')
-  $('#fourthLocLists').empty()                
-  $($cityFour).empty()
-  $($inputFour).val('')
 })
 
 
@@ -38,7 +35,11 @@ $clearAll.click(function(){
 const $clearOne = $('.clearOne')
 
 $clearOne.click(function(){
-  $('#firstLocLists').empty()
+
+  $('.forecastDayOne').empty()
+  $('.forecastDayTwo').empty()
+  $('.forecastDayThree').empty()
+  $('.forecastDayFour').empty()
   $($cityOne).empty()
   $($inputOne).val('')
 });
@@ -47,7 +48,10 @@ $clearOne.click(function(){
 const $clearTwo = $('.clearTwo')
 
 $clearTwo.click(function(){
-  $('#secondLocLists').empty()
+  $('.forecastLocTwoDayOne').empty()
+  $('.forecastLocTwoDayTwo').empty()
+  $('.forecastLocTwoDayThree').empty()
+  $('.forecastLocTwoDayFour').empty()
   $($cityTwo).empty()
   $($inputTwo).val('')
 });
@@ -56,7 +60,10 @@ $clearTwo.click(function(){
 const $clearThree = $('.clearThree')
 
 $clearThree.click(function(){
-  $('#thirdLocLists').empty()
+  $('.forecastLocThreeDayOne').empty()
+  $('.forecastLocThreeDayTwo').empty()
+  $('.forecastLocThreeDayThree').empty()
+  $('.forecastLocThreeDayFour').empty()
   $($cityThree).empty()
   $($inputThree).val('')
 });
@@ -65,7 +72,10 @@ $clearThree.click(function(){
 const $clearFour = $('.clearFour')
 
 $clearFour.click(function(){
-  $('#fourthLocLists').empty()                
+  $('.forecastLocFourDayOne').empty()
+  $('.forecastLocFourDayTwo').empty()
+  $('.forecastLocFourDayThree').empty()
+  $('.forecastLocFourDayFour').empty()
   $($cityFour).empty()
   $($inputFour).val('')
 });
@@ -312,6 +322,12 @@ function handleGetData(e){
    function(error) {
     console.log('something is wrong')
     console.log(error)
+    $cityOne.text("Sorry, we couldn't find that zip code. Please try again.")
+    $('.forecastDayOne').empty()
+    $('.forecastDayTwo').empty()
+    $('.forecastDayThree').empty()
+    $('.forecastDayFour').empty()              
+
 })
  
 }
@@ -387,6 +403,11 @@ function handleGetDataLocTwo(e){
     function(error) {
      console.log('something is wrong')
      console.log(error)
+     $cityTwo.text("Sorry, we couldn't find that zip code. Please try again.")
+     $('.forecastLocTwoDayOne').empty()
+     $('.forecastLocTwoDayTwo').empty()
+     $('.forecastLocTwoDayThree').empty()
+     $('.forecastLocTwoDayFour').empty()             
     })
 }
 
@@ -461,6 +482,11 @@ function handleGetDataLocThree(e){
     function(error) {
      console.log('something is wrong')
      console.log(error)
+     $cityThree.text("Sorry, we couldn't find that zip code. Please try again.")
+     $('.forecastLocThreeDayOne').empty()
+     $('.forecastLocThreeDayTwo').empty()
+     $('.forecastLocThreeDayThree').empty()
+     $('.forecastLocThreeDayFour').empty()              
     })
   }
 
@@ -535,5 +561,10 @@ function handleGetDataLocThree(e){
       function(error) {
        console.log('something is wrong')
        console.log(error)
+       $cityFour.text("Sorry, we couldn't find that zip code. Please try again.")
+       $('.forecastLocFourDayOne').empty()
+       $('.forecastLocFourDayTwo').empty()
+       $('.forecastLocFourDayThree').empty()
+       $('.forecastLocFourDayFour').empty()             
       })
     }

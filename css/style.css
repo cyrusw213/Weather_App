@@ -17,11 +17,7 @@ body {
         'sect1 sect2'
         'sect3 sect4';
 }
-@media(max-width: 500px) { 
-    body {
-        grid-template-columns: 1fr;
-    }
-}
+
 #hdr {
     grid-area: hdr;
     color: white;
@@ -126,3 +122,12 @@ body {
     top: 0;
 }
 
+.clearOne, .clearTwo, .clearThree, .clearFour {
+    background-color: red;
+    color: white;
+}
+
+button {
+    background-color: palegreen;
+    
+}
