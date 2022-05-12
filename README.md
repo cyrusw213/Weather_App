@@ -25,3 +25,4 @@ HTML, CSS, JavaScript, jQuery
 ## References
 - Data Courtesy of [OpenWeather's 5 Day / 3 Hour Forecast](https://openweathermap.org/forecast5). Specifically, their built in [API Request by Zip Code](https://openweathermap.org/forecast5#zip5)
 - [OpenWeatherMap API Tutorial 2021](https://www.youtube.com/watch?v=nGVoHEZojiQ)
+- [Build Weather App With Ajax Using Open Weather Map API: Weather Icons and Units](https://www.youtube.com/watch?v=IfG4A8YfxsY&t=485s)
