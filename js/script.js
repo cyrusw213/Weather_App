@@ -16,6 +16,25 @@
 
 
 // clear buttons - should be using .empty()
+// clear all 
+const $clearAll = $('.clearAll')
+$clearAll.click(function(){
+  $('#firstLocLists').empty()
+  $($cityOne).empty()
+  $($inputOne).val('')
+  $('#secondLocLists').empty()
+  $($cityTwo).empty()
+  $($inputTwo).val('')
+  $('#thirdLocLists').empty()
+  $($cityThree).empty()
+  $($inputThree).val('')
+  $('#fourthLocLists').empty()                
+  $($cityFour).empty()
+  $($inputFour).val('')
+})
+
+
+// clear location one
 const $clearOne = $('.clearOne')
 
 $clearOne.click(function(){

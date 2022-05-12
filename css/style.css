@@ -17,7 +17,8 @@ main{
 
 header {
     color: white;
-    text-align: center
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
 }
 
 .clearAll {
@@ -31,7 +32,7 @@ header {
     border-color: black;
     border-style: solid;
     border-radius: 1px;
-
+    font-family: "Lucida Console", "Courier New", monospace;
 }               
 
 
@@ -43,6 +44,7 @@ header {
     border-color: black;
     border-style: solid;
     border-radius: 1px;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 
@@ -53,6 +55,7 @@ header {
     border-color: black;
     border-style: solid;
     border-radius: 1px;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 #locFour {
@@ -62,6 +65,7 @@ header {
     border-color: black;
     border-style: solid;
     border-radius: 1px;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 #firstLocLists {

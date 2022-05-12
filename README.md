@@ -22,6 +22,10 @@ HTML, CSS, JavaScript, jQuery
 
 - add state to the city that shows up
 
+- refactor a lot of the code. currently way too many lines of code for the simplicity of the app
+
+- currently loads choppy, would like the text and icons to load simultaneously
+
 ## References
 - Data Courtesy of [OpenWeather's 5 Day / 3 Hour Forecast](https://openweathermap.org/forecast5). Specifically, their built in [API Request by Zip Code](https://openweathermap.org/forecast5#zip5)
 - [OpenWeatherMap API Tutorial 2021](https://www.youtube.com/watch?v=nGVoHEZojiQ)
