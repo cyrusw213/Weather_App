@@ -398,7 +398,7 @@ function handleGetDataLocTwo(e){
      console.log('something is wrong')
      console.log(error)
      $cityTwo.text("Sorry, we couldn't find that zip code. Please try again.")
-     $("#firstLocLists ul").each(function(){
+     $("#secondLocLists ul").each(function(){
       $(this).empty()         
     })           
     })
@@ -476,7 +476,7 @@ function handleGetDataLocThree(e){
      console.log('something is wrong')
      console.log(error)
      $cityThree.text("Sorry, we couldn't find that zip code. Please try again.")
-     $("#firstLocLists ul").each(function(){
+     $("#thirdLocLists ul").each(function(){
       $(this).empty()         
     })            
     })
@@ -554,7 +554,7 @@ function handleGetDataLocThree(e){
        console.log('something is wrong')
        console.log(error)
        $cityFour.text("Sorry, we couldn't find that zip code. Please try again.")
-       $("#firstLocLists ul").each(function(){
+       $("#fourthLocLists ul").each(function(){
         $(this).empty()         
       })                           
       })
