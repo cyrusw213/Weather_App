@@ -35,49 +35,45 @@ $clearAll.click(function(){
 const $clearOne = $('.clearOne')
 
 $clearOne.click(function(){
-
-  $('.forecastDayOne').empty()
-  $('.forecastDayTwo').empty()
-  $('.forecastDayThree').empty()
-  $('.forecastDayFour').empty()
+  $("#firstLocLists ul").each(function(){
+    $(this).empty()
   $($cityOne).empty()
   $($inputOne).val('')
+  console.log
+})
 });
 
 // clear button location two 
 const $clearTwo = $('.clearTwo')
 
 $clearTwo.click(function(){
-  $('.forecastLocTwoDayOne').empty()
-  $('.forecastLocTwoDayTwo').empty()
-  $('.forecastLocTwoDayThree').empty()
-  $('.forecastLocTwoDayFour').empty()
+  $("#secondLocLists ul").each(function(){
+    $(this).empty()
   $($cityTwo).empty()
   $($inputTwo).val('')
+})
 });
 
 // clear button location three
 const $clearThree = $('.clearThree')
 
 $clearThree.click(function(){
-  $('.forecastLocThreeDayOne').empty()
-  $('.forecastLocThreeDayTwo').empty()
-  $('.forecastLocThreeDayThree').empty()
-  $('.forecastLocThreeDayFour').empty()
+  $("#thirdLocLists ul").each(function(){
+    $(this).empty()
   $($cityThree).empty()
   $($inputThree).val('')
+})
 });
 
 // clear button location three
 const $clearFour = $('.clearFour')
 
 $clearFour.click(function(){
-  $('.forecastLocFourDayOne').empty()
-  $('.forecastLocFourDayTwo').empty()
-  $('.forecastLocFourDayThree').empty()
-  $('.forecastLocFourDayFour').empty()
+  $("#fourthLocLists ul").each(function(){
+    $(this).empty()
   $($cityFour).empty()
   $($inputFour).val('')
+})
 });
 
 
@@ -323,11 +319,9 @@ function handleGetData(e){
     console.log('something is wrong')
     console.log(error)
     $cityOne.text("Sorry, we couldn't find that zip code. Please try again.")
-    $('.forecastDayOne').empty()
-    $('.forecastDayTwo').empty()
-    $('.forecastDayThree').empty()
-    $('.forecastDayFour').empty()              
-
+    $("#firstLocLists ul").each(function(){
+      $(this).empty()         
+    })
 })
  
 }
@@ -404,10 +398,9 @@ function handleGetDataLocTwo(e){
      console.log('something is wrong')
      console.log(error)
      $cityTwo.text("Sorry, we couldn't find that zip code. Please try again.")
-     $('.forecastLocTwoDayOne').empty()
-     $('.forecastLocTwoDayTwo').empty()
-     $('.forecastLocTwoDayThree').empty()
-     $('.forecastLocTwoDayFour').empty()             
+     $("#firstLocLists ul").each(function(){
+      $(this).empty()         
+    })           
     })
 }
 
@@ -483,10 +476,9 @@ function handleGetDataLocThree(e){
      console.log('something is wrong')
      console.log(error)
      $cityThree.text("Sorry, we couldn't find that zip code. Please try again.")
-     $('.forecastLocThreeDayOne').empty()
-     $('.forecastLocThreeDayTwo').empty()
-     $('.forecastLocThreeDayThree').empty()
-     $('.forecastLocThreeDayFour').empty()              
+     $("#firstLocLists ul").each(function(){
+      $(this).empty()         
+    })            
     })
   }
 
@@ -562,9 +554,8 @@ function handleGetDataLocThree(e){
        console.log('something is wrong')
        console.log(error)
        $cityFour.text("Sorry, we couldn't find that zip code. Please try again.")
-       $('.forecastLocFourDayOne').empty()
-       $('.forecastLocFourDayTwo').empty()
-       $('.forecastLocFourDayThree').empty()
-       $('.forecastLocFourDayFour').empty()             
+       $("#firstLocLists ul").each(function(){
+        $(this).empty()         
+      })                           
       })
     }
