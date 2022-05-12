@@ -10,13 +10,14 @@
     <title>Weather App</title>
 </head>
 <body>
-    <header>
-        <button class = 'clearAll' type ="submit">Clear All</button>
-        <h1>Weather Side by Side</h1>
-        <p>Check out the weather forecasts for up to four different zip codes below!</p>
-    </header>
-    <main>
-        <div id = 'locOne'>
+
+    <main id = 'all'>
+        <header id = 'hdr'>
+            <button class = 'clearAll' type ="submit">Clear All</button>
+            <h1>Weather Side by Side</h1>
+            <p>Check out the weather forecasts for up to four different zip codes below!</p>
+        </header>
+        <main id = 'locOne'>
             <h2>First Location</h2>
             <div id = 'buttons'>
                 <form id = 'buttonOne'>
@@ -24,7 +25,7 @@
                     <button type="submit"> Submit </button>
                 </form>
                 <button class = 'clearOne' type ="submit">Clear</button>
-        </div>
+            </div>
         <h4 class = 'cityOne'></h4>
               <Div id = 'firstLocLists'>
                    
@@ -33,8 +34,8 @@
                     <ul class = 'forecastDayThree'></ul>
                     <ul class = 'forecastDayFour'></ul>
             </Div>
-        </div>
-        <div id = 'locTwo'>
+        </main>
+        <main id = 'locTwo'>
             <h2>Second Location</h2>
             <div id = 'buttons'>
                 <form id = 'buttonTwo'>
@@ -51,8 +52,8 @@
                     <ul class = 'forecastLocTwoDayFour'></ul>
                 </div>
 
-        </div>
-        <div id = 'locThree'>
+        </main>
+        <main id = 'locThree'>
             <h2>Third Location</h2>
             <div id = 'buttons'>
                 <form id = 'buttonThree'>
@@ -68,8 +69,8 @@
                     <ul class = 'forecastLocThreeDayThree'></ul>
                     <ul class = 'forecastLocThreeDayFour'></ul>
                 </div>
-        </div>
-        <div id = 'locFour'>
+        </main>
+        <main id = 'locFour'>
             <h2>Fourth Location</h2>
             <div id = 'buttons'>
                 <form id = 'buttonFour'>
@@ -86,10 +87,8 @@
                     <ul class = 'forecastLocFourDayFour'></ul>
                 </div>
 
-        </div>
+        </main>
     </main>
-
-
 </body>
 <script src="./js/script.js"></script>
 </html>
